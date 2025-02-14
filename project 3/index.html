@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Ensures compatibility with older versions of IE -->
+    <!-- Для лучшей совместимости с IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="theme-color" content="#000000" />
@@ -11,6 +11,7 @@
     <meta name="revisit-after" content="7 days" />
     <meta name="geo.region" content="US-CA" />
     <meta name="geo.placename" content="San Francisco" />
+    <!-- Важно для адаптивного дизайна -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <title>VIKS AI - Professional AI Avatars for Video Marketing</title>
@@ -20,6 +21,7 @@
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     
+    <!-- Open Graph meta tags для соцсетей -->
     <meta property="og:title" content="VIKS AI - Professional AI Avatars for Video Marketing" />
     <meta property="og:description" content="Create engaging video content with ultra-realistic AI avatars. Perfect for businesses, startups, and marketers looking to scale their video production." />
     <meta property="og:type" content="website" />
@@ -31,6 +33,7 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/jpeg" />
     
+    <!-- Twitter meta tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@viksai" />
     <meta name="twitter:creator" content="@viksai" />
@@ -38,13 +41,15 @@
     <meta name="twitter:description" content="Create engaging video content with ultra-realistic AI avatars. Perfect for businesses, startups, and marketers looking to scale their video production." />
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1633613286991-611fe299c4be?auto=format&fit=crop&q=80&w=1200" />
     
+    <!-- Улучшение производительности: предварительное подключение к внешним ресурсам -->
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="dns-prefetch" href="https://images.unsplash.com" />
     <link rel="canonical" href="https://viksai.com" />
     
-    <!-- Preload the main script to improve load performance -->
+    <!-- Предварительная загрузка основного скрипта для ускорения его выполнения -->
     <link rel="preload" href="/src/main.tsx" as="script" />
-
+    
+    <!-- Структурированные данные (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -91,8 +96,9 @@
   </head>
   <body>
     <div id="root"></div>
-    <!-- The module script below is deferred by default -->
+    <!-- Скрипт с типом module, который по умолчанию работает с defer -->
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Блок для пользователей с отключенным JavaScript -->
     <noscript>
       <div style="text-align: center; padding: 20px;">
         Please enable JavaScript to use VIKS AI. We create professional AI avatars for video marketing.
