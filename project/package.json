@@ -30,5 +30,8 @@
     "eslint-plugin-react": "^7.37.4",
     "prettier": "^3.5.1",
     "vite-plugin-pwa": "^0.21.1"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
