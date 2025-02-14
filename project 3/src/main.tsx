@@ -1,15 +1,35 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
-import './index.css';
+// src/main.tsx
 
-const rootElement = document.getElementById('root');
-if (!rootElement) throw new Error('Root element not found');
+import React, { Suspense, lazy } from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
-const root = createRoot(rootElement);
+// Импортируем ErrorBoundary для обработки ошибок в компонентах
+import ErrorBoundary from './components/ErrorBoundary';
 
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+// Ленивая загрузка основных страниц
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+
+const App = () => (
+  <Router>
+    <Helmet>
+      <title>VIKS AI - Professional AI Avatars for Video Marketing</title>
+      <meta name="description" content="Create engaging video content with ultra-realistic AI avatars. Perfect for businesses, startups, and marketers looking to scale their video production." />
+      <link rel="canonical" href="https://viksai.com" />
+    </Helmet>
+    <ErrorBoundary>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          {/* Другие маршруты */}
+        </Routes>
+      </Suspense>
+    </ErrorBoundary>
+  </Router>
 );
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(<App />);
