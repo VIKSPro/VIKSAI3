@@ -40,19 +40,31 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center transform transition-all duration-1000 ${
-          isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
-        }`} className="py-12 sm:py-20">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#75d031] to-[#4a8c13] drop-shadow-2xl" itemScope itemType="https://schema.org/WebPage">
-            Transform Your Videos<br />with AI Avatars
-          </h1>
-          
-          <p className={`text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-300 ${
+        {/* Объединяем все классы в одну шаблонную строку */}
+        <div
+          className={`text-center transform transition-all duration-1000 ${
             isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
-          }`}>
-            Create engaging video content with ultra-realistic AI avatars. Perfect for businesses, startups, and marketers looking to scale their video production.
+          } py-12 sm:py-20`}
+        >
+          <h1
+            className="text-4xl sm:text-5xl md:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#75d031] to-[#4a8c13] drop-shadow-2xl"
+            itemScope
+            itemType="https://schema.org/WebPage"
+          >
+            Transform Your Videos
+            <br />
+            with AI Avatars
+          </h1>
+
+          <p
+            className={`text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-300 ${
+              isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+            }`}
+          >
+            Create engaging video content with ultra-realistic AI avatars. Perfect for businesses, startups, and
+            marketers looking to scale their video production.
           </p>
-          
+
           <a
             href="#pricing"
             className={`inline-flex items-center px-8 py-4 bg-[#75d031] text-white rounded-full text-lg font-semibold group hover:bg-[#4a8c13] transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#75d031]/20 ${
