@@ -8,9 +8,6 @@ import { Helmet } from 'react-helmet';
 // Импортируем ErrorBoundary для обработки ошибок в компонентах
 import ErrorBoundary from './components/ErrorBoundary';
 
-// Ленивая загрузка основных страниц
-const Home = lazy(() => import('./components'));
-
 const App = () => (
   <Router>
     <Helmet>
