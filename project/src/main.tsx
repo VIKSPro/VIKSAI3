@@ -9,8 +9,8 @@ import { Helmet } from 'react-helmet';
 import ErrorBoundary from './components/ErrorBoundary';
 
 // Ленивая загрузка основных страниц
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
+const Home = () => <div>Home page is under construction.</div>;
+const About = () => <div>About page is under construction.</div>;
 
 const App = () => (
   <Router>
