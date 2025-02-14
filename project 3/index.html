@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Ensures compatibility with older versions of IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="theme-color" content="#000000" />
     <meta name="author" content="VIKS Production LLC" />
@@ -10,6 +12,7 @@
     <meta name="geo.region" content="US-CA" />
     <meta name="geo.placename" content="San Francisco" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>VIKS AI - Professional AI Avatars for Video Marketing</title>
     <meta name="description" content="Create engaging video content with ultra-realistic AI avatars. Perfect for businesses, startups, and marketers looking to scale their video production." />
     <meta name="keywords" content="AI avatars, video marketing, AI video production, professional videos, marketing content, video content creation" />
@@ -39,6 +42,9 @@
     <link rel="dns-prefetch" href="https://images.unsplash.com" />
     <link rel="canonical" href="https://viksai.com" />
     
+    <!-- Preload the main script to improve load performance -->
+    <link rel="preload" href="/src/main.tsx" as="script" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -85,6 +91,7 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- The module script below is deferred by default -->
     <script type="module" src="/src/main.tsx"></script>
     <noscript>
       <div style="text-align: center; padding: 20px;">
